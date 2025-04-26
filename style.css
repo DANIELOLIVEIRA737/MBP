@@ -1,0 +1,152 @@
+/* style.css */
+body {
+    background-color: #1b1b1b;
+    color: #f5f5f5;
+    font-family: 'Creepster', cursive, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  nav {
+    background-color: #111;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav a {
+    color: crimson;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: darkred;
+  }
+  
+  /* Estilo do menu hamburguer (escondido inicialmente) */
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-links a {
+    margin-right: 15px;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: crimson;
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: crimson;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: darkred;
+    margin-top: 40px;
+  }
+  
+  p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.2em;
+  }
+  
+  .testemunhos, .galeria, .formulario {
+    margin-top: 30px;
+  }
+  
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .galeria img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid crimson;
+    border-radius: 10px;
+  }
+  
+  input, textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-family: sans-serif;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  }
+  
+  @media (max-width: 600px) {
+    /* Ajusta o tamanho do título e do texto para telas pequenas */
+    h1 {
+      font-size: 2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    .galeria img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  
+    nav a {
+      font-size: 1em;
+      margin: 0 10px;
+    }
+  
+    /* Menu hamburguer: ocultar links de navegação e exibir o ícone */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
